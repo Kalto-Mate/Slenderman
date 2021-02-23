@@ -32,13 +32,24 @@ public class GameManager : MonoBehaviour
             
             Slenderman.AppearInFront();
         }
+
+        //Adjust static overlay
+        GuiManager.singleInstance.UpdateStaticEffect(Dist2Slenderman(), Slenderman.interferenceStart, Slenderman.interferencePeak);
+
         
 
     }
-
+    //GAMEPLAY
     public void CollectPage()
     {
         pagesCollected++;
         GuiManager.singleInstance.UpdatePageCount(pagesCollected);
     }
+    //INTERNAL
+    public float Dist2Slenderman()
+    {
+        return (Slenderman.transform.position - Jugador.transform.position).magnitude;
+    }
+
+    
 }

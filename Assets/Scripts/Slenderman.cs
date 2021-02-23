@@ -10,6 +10,7 @@ public class Slenderman : MonoBehaviour
 
     public SphereCollider Range;
     public SpriteRenderer sprite;
+    public float interferenceStart = 30; public float interferencePeak = 5;
 
     //----------------------------------------------------------------------------------
     NavMeshAgent navMeshAgent;

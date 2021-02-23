@@ -4534,6 +4534,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: {fileID: 961626565}
   sprite: {fileID: 98372540}
+  interferenceStart: 30
+  interferencePeak: 5
 --- !u!195 &961626564
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4940,6 +4942,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pageCounterDisplay: {fileID: 322686297}
+  nieve: {fileID: 1988007710}
+  faceSilouette: {fileID: 2112167797}
+  slenderman: {fileID: 1680591752}
 --- !u!1 &1091859352
 GameObject:
   m_ObjectHideFlags: 0
@@ -6163,6 +6168,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7784824105163000337}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1680591752 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7784824105765192089, guid: 3ddd83018fc76f140ad30d69e4e53f2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7784824105163000337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1724036483
 Mesh:
   m_ObjectHideFlags: 0
@@ -6722,9 +6733,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2146714906033513954}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1988007710 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2146714905331856124, guid: 7cd6ffc626cf92d4f867feaad22f9882,
+    type: 3}
+  m_PrefabInstance: {fileID: 2146714906033513954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2112167795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7523463513619014602, guid: 48f0cb31d01787e4c9596af087976faa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7523463512450579641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2112167797 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7523463513619014604, guid: 48f0cb31d01787e4c9596af087976faa,
     type: 3}
   m_PrefabInstance: {fileID: 7523463512450579641}
   m_PrefabAsset: {fileID: 0}
@@ -6743,7 +6766,7 @@ PrefabInstance:
     - target: {fileID: 2146714905331856124, guid: 7cd6ffc626cf92d4f867feaad22f9882,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.53333336
+      value: 0.6039216
       objectReference: {fileID: 0}
     - target: {fileID: 2146714905331856126, guid: 7cd6ffc626cf92d4f867feaad22f9882,
         type: 3}
@@ -7094,7 +7117,7 @@ PrefabInstance:
     - target: {fileID: 7784824105765192084, guid: 3ddd83018fc76f140ad30d69e4e53f2e,
         type: 3}
       propertyPath: m_Name
-      value: game_over_0
+      value: Slenderman
       objectReference: {fileID: 0}
     - target: {fileID: 7784824105765192087, guid: 3ddd83018fc76f140ad30d69e4e53f2e,
         type: 3}
