@@ -6763,6 +6763,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RegularStatic
       objectReference: {fileID: 0}
+    - target: {fileID: 2146714905331856121, guid: 7cd6ffc626cf92d4f867feaad22f9882,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2146714905331856124, guid: 7cd6ffc626cf92d4f867feaad22f9882,
         type: 3}
       propertyPath: m_Color.a
@@ -7104,6 +7109,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FaceSilouette
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523463513619014603, guid: 48f0cb31d01787e4c9596af087976faa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523463513619014604, guid: 48f0cb31d01787e4c9596af087976faa,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.46666667
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48f0cb31d01787e4c9596af087976faa, type: 3}

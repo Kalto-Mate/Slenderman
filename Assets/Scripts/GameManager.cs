@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,11 +28,20 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         isGrabbing = Input.GetButton("{GRAB}");
+
+        //DEBUG
         if (Input.GetButton("{DEBUG}"))
         {
             
             Slenderman.AppearInFront();
         }
+
+        float SlendyAngle = Slenderman.transform.rotation.eulerAngles.y;
+        float PlayerAngle = Jugador.transform.rotation.eulerAngles.y;
+        float angleDiff = Mathf.DeltaAngle(SlendyAngle, PlayerAngle); // -135 a 135 means in frame
+
+        float angle2Slend = Mathf.Atan2(Jugador.transform.position.z - Slenderman.transform.position.z, Jugador.transform.position.x - Slenderman.transform.position.x) * Mathf.Rad2Deg;
+        print(">" + SlendyAngle + ">" + PlayerAngle + ">" + angleDiff);
 
         //Adjust static overlay
         GuiManager.singleInstance.UpdateStaticEffect(Dist2Slenderman(), Slenderman.interferenceStart, Slenderman.interferencePeak);
