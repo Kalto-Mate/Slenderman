@@ -9,19 +9,19 @@ public class GuiManager : MonoBehaviour
     private void Awake() { if (singleInstance == null) singleInstance = this; }
     //---------------------------------------------------------------------------
     public TextMeshProUGUI pageCounterDisplay;
-    public SpriteRenderer nieve;        float maxNieveAlpha = 0.8f;
-    public SpriteRenderer faceSilouette;
+    public SpriteRenderer nieve; float maxNieveAlpha = 0.8f;
+    public SpriteRenderer faceSilouette; float maxfaceSilouette = 0.5f;
     public SpriteRenderer slenderman;
     //-----------------------
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
     public void UpdatePageCount(int input)
@@ -35,21 +35,19 @@ public class GuiManager : MonoBehaviour
         Color CurrentColor = target.color;
         target.color = new Color(CurrentColor.r, CurrentColor.g, CurrentColor.b, alpha);
     }
-        public void SetStaticAlpha(float alpha) { SetSpriteRendererAlpha(nieve, alpha); }
-        public void SetFaceSilouetteAlpha(float alpha) { SetSpriteRendererAlpha(faceSilouette, alpha); }
-        public void SetSlendermanAlpha(float alpha) { SetSpriteRendererAlpha(slenderman, alpha); }
+    public void SetStaticAlpha(float alpha) { SetSpriteRendererAlpha(nieve, alpha); }
+    public void SetFaceSilouetteAlpha(float alpha) { SetSpriteRendererAlpha(faceSilouette, alpha); }
+    public void SetSlendermanAlpha(float alpha) { SetSpriteRendererAlpha(slenderman, alpha); }
 
-    public void UpdateStaticEffect(float distance, float maxradius, float minradius)
+    public void UpdateStaticEffect(float gradient)
     {
-        if (distance > maxradius) SetStaticAlpha(0);
+        float newAlpha = maxNieveAlpha * gradient;
+        SetStaticAlpha(newAlpha);
+    }
 
-        else if (distance <= maxradius && distance >= minradius) //Gradient
-        {
-            float gradient = 1 - (  (distance - minradius)  /  (maxradius - minradius)   );
-            float newAlpha = maxNieveAlpha * gradient;
-            SetStaticAlpha(newAlpha);
-        }
-
-        else if (distance < minradius) SetStaticAlpha(maxNieveAlpha);
+    public void UpdateStareEffect(float gradient)
+    {
+        float newAlpha = maxfaceSilouette * gradient;
+        SetFaceSilouetteAlpha(newAlpha);
     }
 }

@@ -10,13 +10,18 @@ public class Slenderman : MonoBehaviour
 
     public SphereCollider Range;
     public SpriteRenderer sprite;
-    public float interferenceStart = 30; public float interferencePeak = 5;
+    public float interferenceStart = 30;    public float interferencePeak = 5;
+
+    public float visionCone = 145;          public float stareDistance = 60;
 
     //----------------------------------------------------------------------------------
     NavMeshAgent navMeshAgent;
         float walkSpeedAcceleration = 8;        float walkSpeed = 3;
         float warpSpeedAcceleration = 10000000;    float warpSpeed = 10000000;
-    public enum Mode { ChasePlayer, Idle, ChaseFront};
+    //----------------------------------------------------------------------------------
+
+    public enum Mode { Hunt, Idle, Ambush};
+    public bool banished = false;
     Mode currentMode;
 
     private void Awake()
@@ -36,8 +41,8 @@ public class Slenderman : MonoBehaviour
     {
         if (currentMode != Mode.Idle) 
         {
-            if (currentMode == Mode.ChasePlayer)        ChasePlayer();
-            else if (currentMode == Mode.ChaseFront)    ChaseFront();
+            if (currentMode == Mode.Hunt)           ChasePlayer();
+            else if (currentMode == Mode.Ambush)    ChaseFront();
         }
         
     }
@@ -57,6 +62,7 @@ public class Slenderman : MonoBehaviour
         Range.enabled = !input;
         sprite.enabled = !input;
         currentMode = Mode.Idle;
+        banished = input;
     }
 
     public bool AppearInFront()

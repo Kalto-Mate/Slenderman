@@ -5,6 +5,7 @@ using UnityEngine;
 public class Nota : MonoBehaviour
 {
     public GameObject pickupPrompt;
+    public GameObject self;
     void Start()
     {
         pickupPrompt.SetActive(false);
@@ -16,7 +17,7 @@ public class Nota : MonoBehaviour
         if (GameManager.singleInstance.inPickUpRange && GameManager.singleInstance.isGrabbing)
         {
             GameManager.singleInstance.CollectPage();
-            Object.Destroy(this.gameObject);
+            self.SetActive(false);
         }
     }
 
