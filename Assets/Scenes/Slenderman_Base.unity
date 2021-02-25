@@ -4109,6 +4109,7 @@ MonoBehaviour:
   Jugador: {fileID: 677934806}
   inPickUpRange: 0
   isGrabbing: 0
+  lastNote: {fileID: 0}
   frontSpawn: {fileID: 937121641}
   Slenderman: {fileID: 961626563}
   totalPages: 5
@@ -13417,6 +13418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note
       objectReference: {fileID: 0}
+    - target: {fileID: 1838763060662358245, guid: 84ca3c73817554148bb4e68dd5f9f332,
+        type: 3}
+      propertyPath: m_TagString
+      value: Note
+      objectReference: {fileID: 0}
     - target: {fileID: 1838763060662358249, guid: 84ca3c73817554148bb4e68dd5f9f332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13913,6 +13919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Note 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019444711226289519, guid: 3559bc5bb2992c94fa9a9dfaedaf7c74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Note
       objectReference: {fileID: 0}
     - target: {fileID: 3019444711579166049, guid: 3559bc5bb2992c94fa9a9dfaedaf7c74,
         type: 3}
@@ -17109,6 +17120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5636893891992327828, guid: 32fd834bc245f854cb91e742822de668,
+        type: 3}
+      propertyPath: m_TagString
+      value: Note
+      objectReference: {fileID: 0}
     - target: {fileID: 5636893891992327832, guid: 32fd834bc245f854cb91e742822de668,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17491,6 +17507,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7440357909881395890, guid: 88ad9ae7656b2e4469301df5160e01ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Note
+      objectReference: {fileID: 0}
     - target: {fileID: 7440357910353744273, guid: 88ad9ae7656b2e4469301df5160e01ba,
         type: 3}
       propertyPath: Follow
@@ -17609,6 +17630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Note 1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510641011765235035, guid: 0c0b413578474b04aa75a074de826078,
+        type: 3}
+      propertyPath: m_TagString
+      value: Note
       objectReference: {fileID: 0}
     - target: {fileID: 7510641012377048759, guid: 0c0b413578474b04aa75a074de826078,
         type: 3}

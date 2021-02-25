@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
     private void Awake()    {if (singleInstance == null) singleInstance = this; }
     ////////////////////////////////////////
 
-    public GameObject Jugador;
+    public GameObject Jugador; 
         [HideInInspector]   public bool inPickUpRange = false;
         [HideInInspector]   public bool isGrabbing = false;
-        public GameObject frontSpawn;
+        public GameObject lastNote;
+
+    public GameObject frontSpawn;
 
     public Slenderman Slenderman;
 
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         isGrabbing = Input.GetButton("{GRAB}");
+
 
         //DEBUG
         if (Input.GetButton("{DEBUG}")) //Letra T
@@ -58,7 +61,11 @@ public class GameManager : MonoBehaviour
     {
         pagesCollected++;
         GuiManager.singleInstance.UpdatePageCount(pagesCollected);
+        lastNote.SetActive(false);
+        inPickUpRange = false;
     }
+    
+
     //INTERNAL
     public float Dist2Slenderman()
     {

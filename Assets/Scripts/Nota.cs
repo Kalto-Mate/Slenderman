@@ -17,7 +17,6 @@ public class Nota : MonoBehaviour
         if (GameManager.singleInstance.inPickUpRange && GameManager.singleInstance.isGrabbing)
         {
             GameManager.singleInstance.CollectPage();
-            self.SetActive(false);
         }
     }
 
@@ -27,6 +26,7 @@ public class Nota : MonoBehaviour
         {
             GameManager.singleInstance.inPickUpRange = true;
             pickupPrompt.SetActive(true);
+            GameManager.singleInstance.lastNote = this.gameObject;
         }
     }
 
@@ -36,6 +36,7 @@ public class Nota : MonoBehaviour
         {
             GameManager.singleInstance.inPickUpRange = false;
             pickupPrompt.SetActive(false);
+            GameManager.singleInstance.lastNote = null;
         }
     }
 }
